@@ -1,3 +1,9 @@
+@font-face {
+  font-family: Gatter;
+  src: url(./Font/Gilroy-Medium.otf);
+  font-style: normal
+}
+
 .App {
   text-align: center;
 }
@@ -26,6 +32,396 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.productContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Or space-between or space-around */
+}
+
+.productContainer > section {
+  align-items: center;
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  text-align: center;
+  max-width: 400px;
+}
+
+.productContainer > section > span {
+  flex-grow: 1;
+  margin: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 1600px) {
+  .productContainer > section {  
+    max-width: 250px;
+  }
+}
+
+.productContainer ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.productContainer aside {
+  width: 100%;
+}
+
+body {
+  font: 16px "Gatter", sans-serif;
+  margin: 0;
+}
+
+img {
+  width: 400px;
+  border-radius: 2px;
+}
+
+@media (max-width: 1600px) {
+  img{
+    width: 250px;
+  }
+}
+
+nav {
+  background: #330099;
+  position: sticky; 
+  top: 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  min-height: 4rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  flex-shrink: 0;
+  flex-basis: 25%;
+}
+
+nav ul a {
+  flex-shrink: 0;
+  flex-basis: 25%;
+}
+
+@media (max-width:900px)  { 
+  nav ul li {
+    flex-grow: 1;
+  } 
+  nav ul a {
+    flex-grow: 1;
+  }   
+}
+
+.cartPlaceholder {
+  color: white;
+  text-decoration: underline;
+}
+
+nav ul li a {
+  text-align: center;
+  color: #fff;
+  padding: 0.5em;
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+nav ul li a.active {
+  background: #24006B;
+}
+
+nav ul li a:hover {
+  background: #AA80FF;
+  color: #000;
+  font-weight: 700;
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  color: #777380;
+  font-weight: 200;
+  font-size: 35px;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.productContainer > section {
+  background: #fff;
+  padding: 1em;
+  margin: 0.5em;
+  border-radius: 4px;
+  min-width: 14rem;
+  min-height: 34rem;
+  max-height: 34rem;
+}
+
+button {
+  background: #009999 url(http://i.imgur.com/RWKrr8S.png);
+  background-repeat: no-repeat;
+  background-position: 2em 50%;
+  background-size: 2em;
+  border: 0;  
+  border-radius: 4px;
+  cursor: pointer;
+  color: #FFF;  
+  font-weight: bold;
+  font-size: 13px;
+  padding: 1.5em 3em;
+  padding-left: 6em;
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+}
+
+.AddBtn {
+  background-color: #009999 ;
+}
+
+.removeBtn {
+  background-color: #ec1212 !important;
+}
+
+button:hover {
+  background-color: #006B6B;
+  background-size: 3em;
+  background-position: 1.5em 50%;
+}
+
+.productContainer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.productContainer li {
+  background: #eee;
+  font-weight: 700;
+  padding: 0.3em 0.6em;
+  border-radius: 1em;
+}
+
+.checkoutContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout-labels {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.product-image {
+  float: left;
+  width: 20%;
+}
+
+.product-details {
+  float: left;
+  width: 37%;
+}
+
+.product-price {
+  float: left;
+  width: 12%;
+}
+
+.product-quantity {
+  float: left;
+  width: 10%;
+}
+
+.product-removal {
+  float: left;
+  width: 9%;
+}
+
+.product-line-price {
+  float: left;
+  width: 12%;
+  text-align: right;
+}
+
+.checkout-labels label {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.flexBtn {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 1.6rem;
+}
+
+.product {
+  display: flex;
+  align-items: center;  
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+.product .product-image {
+  text-align: center;
+}
+.product .product-image img {
+  width: 100px;
+}
+.product .product-details .product-title {
+  margin-right: 20px;
+  font-family: "Gatter";
+}
+.product .product-details .product-description {
+  margin: 5px 20px 5px 0;
+  line-height: 1.4em;
+}
+.product .product-quantity input {
+  width: 40px;
+}
+.product .remove-product {
+  border: 0;
+  padding: 4px 8px;
+  background-color: #c66;
+  color: #fff;
+  font-family: "Gatter";
+  font-size: 12px;
+  border-radius: 3px;
+}
+.product .remove-product:hover {
+  background-color: #a44;
+}
+
+/* Totals section */
+.totals .totals-item {
+  float: right;
+  clear: both;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.totals .totals-item label {
+  float: left;
+  clear: both;
+  width: 79%;
+  text-align: right;
+}
+.totals .totals-item .totals-value {
+  float: right;
+  width: 21%;
+  text-align: right;
+}
+.totals .totals-item-total {
+  font-family: "Gatter";
+}
+
+.checkout {
+  float: right;
+  border: 0;
+  margin-top: 20px;
+  padding: 6px 25px;
+  background-color: #6b6;
+  color: #fff;
+  font-size: 25px;
+  border-radius: 3px;
+}
+
+.checkout:hover {
+  background-color: #494;
+}
+
+@media screen and (max-width: 650px) {
+  .checkoutContainer {
+    margin: 0;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+  }
+
+  .checkout-labels {
+    display: none;
+  }
+
+  .product-image {
+    float: right;
+    width: auto;
+  }
+  .product-image img {
+    margin: 0 0 10px 10px;
+  }
+
+  .product-details {
+    float: none;
+    margin-bottom: 10px;
+    width: auto;
+  }
+
+  .product-price {
+    clear: both;
+    width: 70px;
+  }
+
+  .product-quantity {
+    width: 100px;
+  }
+  .product-quantity input {
+    margin-left: 20px;
+  }
+
+  .product-quantity:before {
+    content: 'x';
+  }
+
+  .product-removal {
+    width: auto;
+  }
+
+  .product-line-price {
+    float: right;
+    width: 70px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .product-removal {
+    float: right;
+  }
+
+  .product-line-price {
+    float: right;
+    clear: left;
+    width: auto;
+    margin-top: 10px;
+  }
+
+  .product .product-line-price:before {
+    content: 'Item Total: $';
+  }
+
+  .totals .totals-item label {
+    width: 60%;
+  }
+  .totals .totals-item .totals-value {
+    width: 40%;
+  }
 }
 
 @keyframes App-logo-spin {
